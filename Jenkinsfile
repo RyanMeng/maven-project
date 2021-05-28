@@ -3,7 +3,7 @@ pipeline {
     tools{
         maven 'local maven'
     }
-
+    
     stages{
         stage('Build'){
             steps {
@@ -16,14 +16,5 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to staging'){
-            steps{
-                build job:'deploy-to-staging'
-            }
-        }
-
-
-
-
     }
 }
